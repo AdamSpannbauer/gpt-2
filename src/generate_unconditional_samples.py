@@ -6,7 +6,9 @@ import os
 import numpy as np
 import tensorflow as tf
 
-import model, sample, encoder
+import model
+import sample
+import encoder
 
 
 def sample_model(
@@ -24,10 +26,10 @@ def sample_model(
     :seed=None : Integer seed for random number generators, fix seed to
      reproduce results
     :nsamples=0 : Number of samples to return, if 0, continues to
-     generate samples indefinately.
+     generate samples indefinitely.
     :batch_size=1 : Number of batches (only affects speed/memory).
     :length=None : Number of tokens in generated text, if None (default), is
-     determined by model hyperparameters
+     determined by model hyper-parameters
     :temperature=1 : Float value controlling randomness in boltzmann
      distribution. Lower temperature results in less random completions. As the
      temperature approaches zero, the model will become deterministic and

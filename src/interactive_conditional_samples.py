@@ -6,7 +6,9 @@ import os
 import numpy as np
 import tensorflow as tf
 
-import model, sample, encoder
+import model
+import sample
+import encoder
 
 
 def interact_model(
@@ -26,7 +28,7 @@ def interact_model(
     :nsamples=1 : Number of samples to return total
     :batch_size=1 : Number of batches (only affects speed/memory).  Must divide nsamples.
     :length=None : Number of tokens in generated text, if None (default), is
-     determined by model hyperparameters
+     determined by model hyper-parameters
     :temperature=1 : Float value controlling randomness in boltzmann
      distribution. Lower temperature results in less random completions. As the
      temperature approaches zero, the model will become deterministic and
